@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: shinyoungyou-com-tls
+spec:
+  secretName: shinyoungyou-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: shinyoungyou.com
+  dnsNames:
+    - shinyoungyou.com
+    - www.shinyoungyou.com
